@@ -20,8 +20,8 @@ local function base64_encode(data)
         return b:sub(c+1,c+1)
     end)..({ '', '==', '=' })[#data % 3 + 1])
 end
-getgenv().decompile = function(script, scriptName)
-    scriptName = scriptName or (script.Name or "Unknown")
+getgenv().decompile = function(script)
+    scriptName  "Unknown script"
     local ok, bytecode = pcall(getscriptbytecode, script)
     if not ok then
         return "-- Failed to read script bytecode\n--[[\n" .. tostring(bytecode) .. "\n--]]"
