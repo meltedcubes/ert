@@ -55,9 +55,10 @@ getgenv().decompile = function(script)
         return "-- No response from decompiler server\n"
     end
     
-    if response.StatusCode ~= 200 then
-        return "-- Decompiler error (HTTP " .. response.StatusCode .. ")\n--[[\n" .. (response.Body or "Unknown error") .. "\n--]]"
-    end
+  --  if response.StatusCode ~= 200 then
+      --  return "-- Decompiler error (HTTP " .. response.StatusCode .. ")\n--[[\n" .. (response.Body or "Unknown error") .. "\n--]]"
+       -- warn("Response status code is not 200")
+  --  end
     
     local decompiled = response.Body
     local header = "-- Decompiled by Anetia\n"
