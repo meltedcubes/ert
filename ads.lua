@@ -120,7 +120,3 @@ getgenv().decompile_folder = function(folder, outputFolder)
     
   --  print(string.format("\nDecompiled %d scripts (%d failed)", count, failed))
 end
-
--- Example usage (uncomment to test):
--- local script = game:GetService("Players").LocalPlayer.Character.Animate
--- decompile_print(script)
